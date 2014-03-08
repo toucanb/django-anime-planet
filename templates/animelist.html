@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Anime list{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/animelist.css' %}" type="text/css" media="screen">
+<h2>Anime list</h2>
+<ul class="animelist-legend">
+	Legend : 
+	<li class="Watched">Watched</li>
+	<li class="Watching">Watching</li>
+	<li class="Want_to_Watch">Want to watch</li>
+	<li class="Stalled">Stalled</li>
+	<li class="Dropped">Dropped</li>
+</ul>
+<table class="animelist-table">
+	<thead>
+	<tr>
+		<th>Title</th>
+		<th>Type</th>
+		<th>Year</th>
+		<th>Episodes</th>
+		<th>Rating</th>
+	</tr>
+	<tbody>
+	{% include 'anime-planet.html' %}
+	</tbody>
+</table>
+{% endblock %}

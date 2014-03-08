@@ -40,6 +40,8 @@ Configure the project ``urls.py``::
 		url(r'^animelist/', include('anime_planet.urls')),
 	)
 
+Add your anime-planet user in ``views.py`` and you're all set!
+
 Changelog
 ---------
 
